@@ -39,4 +39,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/stokazz:latest
+          tags: ghcr.io/${{ github.repository_owner }}/nvam:latest
