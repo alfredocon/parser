@@ -1,0 +1,26 @@
+{
+  "name": "parser",
+  "version": "1.0.0",
+  "private": true,
+  "main": "parser.js",
+  "bin": "parser",
+  "scripts": {
+    "start": "node parser.js",
+    "build": "esbuild parser.js --bundle --platform=node --target=node20 --external:axios --external:cheerio --external:@aws-sdk/client-s3 --outfile=parser.bundle.js"
+  },
+  "pkg": {
+    "assets": [
+      "pack.json",
+      "site/**/*"
+    ]
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1063.0",
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "pkg": "^5.8.1"
+  }
+}
